@@ -1,0 +1,92 @@
+.navPrincipal {
+    background: linear-gradient(to bottom, #303C63, #000000af);
+    border-top: 1px solid #303C63;
+}
+
+.btn-custom-filtro {
+    font-weight: normal;
+    color: white;
+    background-color: #e5e5e537;
+    border-color: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+.btn-custom-filtro:hover {
+    background-color: #bcbcbc8d
+}
+
+.btn-custom-filtro:active {
+    background-color: #bcbcbc8d;
+
+}
+
+.btn-custom-filtro:focus{
+    background-color: #bcbcbc8d;
+    color: white;
+    border-color: rgb(233, 233, 233);
+    border-width:1px
+}
+
+.btn-custom-busqueda {
+    font-weight: normal;
+    color: rgb(141, 141, 141);
+    background-color: #fede86;
+    border-color: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+.btn-custom-busqueda:hover {
+    background-color: #fede86c7
+}
+
+.btn-custom-busqueda:active {
+    background-color: #fede86c7
+
+}
+
+.btn-custom-busqueda:focus{
+    background-color: #fede86c7;
+    color: white;
+    border-color: rgb(233, 233, 233);
+    border-width:1px
+}
+
+.custom-item-li {
+    font-size: 12px;
+    transition: background-color 0.1s ease; 
+}
+
+
+.custom-item-li:hover {
+    background-color: #001eff16; 
+}
+
+.footer {
+    min-height: 100px;
+    background-color: rgb(96, 96, 96);
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.footer-logo {
+    flex: 0 0 55px;
+    display: flex;
+    align-items: center; 
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 15px; 
+}
+
+.footer p {
+    margin: 0; 
+}
