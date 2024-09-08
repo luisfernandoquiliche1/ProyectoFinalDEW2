@@ -90,3 +90,12 @@
 .footer p {
     margin: 0; 
 }
+
+.border-lg {
+    border-radius: 1.5rem;
+  }
+  
+  .invalid-control {
+    color: red;
+    font-size: 14px;
+  }

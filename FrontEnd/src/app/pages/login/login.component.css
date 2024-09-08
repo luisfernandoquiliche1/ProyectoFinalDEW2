@@ -1,0 +1,25 @@
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #303C63, #000000af);
+  }
+  
+  .login-form-container {
+    margin-inline: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: clamp(250px, 35%, 460px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .login-controls {
+    padding: 0.5rem;
+  }
+  
+  .login-form {
+    width: 100%;
+  }
+  

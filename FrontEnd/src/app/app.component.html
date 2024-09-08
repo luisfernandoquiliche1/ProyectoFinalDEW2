@@ -22,21 +22,22 @@
         </div>
       </form>
     </div>
-    <div class="col-3 d-flex justify-content-center align-items-center">
+    <div class="col-3 d-flex gap-4 justify-content-center align-items-center">
       <p style="color: white">menu</p>
+      <p style="color: white" (click)="cerrarSesion()">Salir</p>
     </div>
   </div>
 </nav>
 
 <div class="container-fluid" style="padding-top: 82px">
   <div class ="row" style="background-color: #ffffffe7 ;height: 50px; border-bottom: 1px solid #303c6339; border-top: 1px solid #303c6339;">
-    
+
     <div class="container-fluid h-100">
       <nav class="navbar navbar-expand-lg h-100">
         <ul class="nav navbar-nav ml-auto ms-1">
             <li class="nav-item ms-4">
               <a class="nav-link" routerLink="inicio" style="color: rgb(117, 129, 193); font-size: 15px; font-weight: 600;">Inicio</a>
-            </li> 
+            </li>
             <li class="nav-item ms-4">
               <a class="nav-link" routerLink="#" style="color: rgb(117, 129, 193); font-size: 15px; font-weight: 600;">Categorias</a>
             </li>
@@ -57,4 +58,18 @@
 
 <section style="min-height: 650px; padding-top: 0px;">
   <router-outlet></router-outlet>
-</section> 
+</section>
+
+<div class="fixed-bottom footer d-flex align-items-center">
+  <div class="container-fluid">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/img/iconWeb.png" alt="Logo" width="55" height="55" class="d-inline-block align-text-top">
+      </div>
+      <div class="footer-text">
+        <p><b>X-Digital Imports</b></p>
+        <p>2024, Todos los derechos reservados &copy;</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {Router, RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'FrontEnd';
+  #router = inject(Router);
+
+  cerrarSesion() {
+    document.cookie = 'isLogin=';
+    this.#router.navigate(['/login']);
+  }
 }
