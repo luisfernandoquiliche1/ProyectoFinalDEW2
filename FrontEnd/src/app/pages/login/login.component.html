@@ -1,1 +1,52 @@
-<p>login works!</p>
+<div class="login-container">
+    <div class="login-form-container">
+      <picture>
+        <img src="assets/img/iconWeb.png" alt="">
+      </picture>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <div class="login-controls">
+          <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input formControlName="usuario" type="text" class="form-control" id="usuario" placeholder="Usuario o correo electrónico">
+            @if (isInvalidForm() && usuarioControl?.errors?.['required']) {
+              <span class="invalid-control">
+                El usuario es requerido
+              </span>
+            }
+          </div>
+          <div class="mb-3">
+            <label for="contrasenia" class="form-label">Contraseña</label>
+            <input formControlName="contrasenia" type="password" class="form-control" id="contrasenia" placeholder="Ingresa tu contraseña">
+            @if (isInvalidForm() && contraseniaControl?.errors?.['required']) {
+              <span class="invalid-control">
+                La contraseña es requerida
+              </span>
+            }
+          </div>
+          <div class="form-check">
+            <input formControlName="recordar" class="form-check-input color-danger" type="checkbox" value="" id="recordarme">
+            <label class="form-check-label" for="recordarme">
+              Recordarme
+            </label>
+          </div>
+        </div>
+  
+        <p>Restablecer contraseña</p>
+  
+        <div class="d-grid my-4">
+          <button type="submit" class="btn btn-danger border-lg">INGRESAR</button>
+        </div>
+  
+        <div class="d-flex justify-center flex-column align-items-center">
+          <div>
+            <a>¿No tienes cuenta? Regístrate</a>
+          </div>
+          <span>ó</span>
+          <div>
+            <a>Seguir como invitado</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
