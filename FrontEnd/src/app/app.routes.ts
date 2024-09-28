@@ -7,6 +7,7 @@ import { TermsAndCondComponent } from './pages/terms-and-cond/terms-and-cond.com
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 
 export const routes: Routes = [
+    {path: "", redirectTo: 'inicio', pathMatch:'full'},
     {path: "inicio", component:InicioComponent},
     {path: "promociones", component: PromocionesComponent},
     {path: "login", component: LoginComponent},
