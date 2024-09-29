@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%; /* Asegúrate de que el body y html ocupen el 100% de la altura */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+
+.contenedor-inicio {
+  display: flex;
+  flex-direction: column;
+}
+
+app-root {
+  flex: 1; /* Esto hará que el app-root ocupe el espacio restante */
+}
+
+.footer {
+  background-color: #676767; /* Color de fondo opcional */
+  padding: 10px 0; /* Espaciado vertical opcional */
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer-text p {
+  margin: 0; /* Elimina el margen por defecto */
+  line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+
+.footer-content {
+  display: flex; /* Asegúrate de que esto ya esté aplicado */
+  align-items: center; /* Centra verticalmente si es necesario */
+}
+
+.footer-text {
+  display: flex; /* Cambia esto para usar flexbox */
+  flex-direction: column; /* Coloca los párrafos en columna */
+  gap: 3px; /* Espacio entre los párrafos, ajusta según sea necesario */
+  font-size: 14px;
+}

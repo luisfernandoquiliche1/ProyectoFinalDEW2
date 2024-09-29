@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+.fondoCol{
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+.fondoProductos {
+    height: 300px;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+.imagen-producto {
+    text-align: center; /* Centra el contenido de texto */
+    width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.imagen-producto img{
+    max-width: auto;
+    height: 120px;
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin desbordar */
+    display: block;
+    margin: 0 auto;
+}
+
+.imagen-producto a{
+    text-decoration: none;
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Colocar imagen y texto en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.imagen-producto a span{
+    display: -webkit-box; /* Usar flexbox para permitir el truncado */
+    -webkit-box-orient: vertical; /* Orientación vertical */
+    -webkit-line-clamp: 2; /* Limitar a 2 líneas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+    max-width: 80%; /* Limita el ancho del span */
+    padding-top: 0.5rem;
+    align-items: center;
+}
+
+.tituloProducto{
+    font-weight:bold;
+    color: rgb(52, 76, 115);
+}
+
+.MarcaProducto{
+    font-weight:700;
+    color: rgb(141, 171, 220);
+}
+
+.PrecioProducto{
+    font-weight:700;
+    color: rgb(255, 255, 255);
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.OtrosDetallesProducto{
+    font-weight:500;
+    color: rgb(141, 171, 220);
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.PrecioAntes{
+    font-weight:400;
+    font-size: 11px;
+    color: rgb(175, 176, 177);
+}
+
+.fondoPrecio {
+    width: 100px;
+    height: 30px;
+    background-color: #303C63;
+    display: flex; /* Cambiado a flex para alinear los elementos en una fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: white;
+    padding: 0.1rem; /* Añadir un poco de espacio interno */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
+
+.PrecioSimbolo {
+    margin-right: 0.2rem; /* Espacio entre el símbolo y el precio */
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #303C63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.marcadorPaginado{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.bodyContent {
+    display: block;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+    padding-bottom: 60px; /* Espacio para el footer si es necesario */
+}
