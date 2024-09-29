@@ -63,34 +63,6 @@
     background-color: #001eff16; 
 }
 
-.footer {
-    min-height: 100px;
-    background-color: rgb(96, 96, 96);
-    color: white;
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-}
-
-.footer-logo {
-    flex: 0 0 55px;
-    display: flex;
-    align-items: center; 
-}
-
-.footer-text {
-    display: flex;
-    flex-direction: column; 
-    margin-left: 15px; 
-}
-
-.footer p {
-    margin: 0; 
-}
-
 /* Ajusta el ancho del carrusel */
 .carousel {
     width: calc(100% - 500px); /* 500px en total, 250px a cada lado */
@@ -194,8 +166,8 @@
 
 .contenedor-categorias-inicio {
     width: calc(100% - 500px);
-    height: 170px;
     border-radius: 200px;
+    padding-top: 25px;
 }
 
 .cat-img {
@@ -308,6 +280,7 @@ body{
 .form-control[type=text]:focus {
 border: 2px solid #555;
 }
+
 @media only screen and (max-width: 600px) {
     .first_col {
         position: initial;
