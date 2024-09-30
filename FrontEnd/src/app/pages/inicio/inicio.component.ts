@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductosService } from '../../services/productos.service';
 import { ImagenesService } from '../../services/imagenes.service';
+import { CategoriasService } from '../../services/categorias.service';
 
 @Component({
   selector: 'app-inicio',
@@ -13,10 +14,12 @@ import { ImagenesService } from '../../services/imagenes.service';
 export class InicioComponent {
   constructor(
     private readonly ps: ProductosService,
-    private readonly is: ImagenesService
+    private readonly is: ImagenesService,
+    private readonly cs: CategoriasService
   ){}
 
     //variables con estructuras sin definir
+    categorias: any[] = []
     products: any[] = []
     images: any[] = []
     pageSize = 12; 
@@ -42,7 +45,14 @@ export class InicioComponent {
       if(product){
         product.images = rpta.data;
       }
+    }) 
+  }
+
+  __be_GetCategorias(){
+    this.cs.__GetCategorias().subscribe((rpta: any) => {
+      this.categorias = rpta.data;
     })
+    console.log(this.categorias)
   }
 
   formatPrice(price: number): string {
@@ -74,6 +84,7 @@ export class InicioComponent {
 
   //Llamamos al metodo cuando carga el componente
   ngOnInit(): void{
-    this.__be_GetProducts()
+    this.__be_GetProducts(),
+    this.__be_GetCategorias()
   }
 }

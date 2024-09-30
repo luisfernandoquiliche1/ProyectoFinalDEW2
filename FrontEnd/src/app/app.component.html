@@ -52,7 +52,9 @@
               <a class="nav-link" routerLink="inicio" style="color: rgb(117, 129, 193); font-size: 15px; font-weight: 600;">Inicio</a>
             </li> 
             <li class="nav-item ms-4">
-              <a class="nav-link" routerLink="categorias" style="color: rgb(117, 129, 193); font-size: 15px; font-weight: 600;">Categorias</a>
+              <button class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategorias" aria-controls="offcanvasCategorias" style="background: none; border: none; color: rgb(117, 129, 193); font-size: 15px; font-weight: 600; cursor: pointer;">
+                Categorías
+              </button>
             </li>
             <li class="nav-item ms-4">
                 <a class="nav-link disabled" routerLink="#" style="color: rgb(195, 195, 198); font-size: 15px; font-weight: 600; background-color: #e3e3e3;">Promociones</a>
@@ -72,3 +74,23 @@
 <div class="container-fluid">
   <router-outlet></router-outlet>
 </div> 
+
+<div class="container mt-4">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCategorias" aria-labelledby="offcanvasCategoriasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCategoriasLabel">Categorías</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+       <a routerLink="categorias">
+          <li class="list-group-item" *ngFor="let categoria of categorias">
+            {{ categoria.NOMBRE }}
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  
