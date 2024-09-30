@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0px auto;
+    padding: 0px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.cart, .order-summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cart {
+    width: 65%;
+}
+.order-summary {
+    width: 30%;
+}
+.cart-header, .order-summary-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.cart-header span {
+    font-size: 16px;
+    color: #666;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.cart-item-details {
+    flex-grow: 1;
+}
+.cart-item-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.cart-item-subtitle {
+    color: #666;
+    margin-bottom: 10px;
+}
+.cart-item-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cart-item-old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+.cart-item-discount {
+    color: #fff;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+.cart-item-quantity button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.cart-item-quantity input {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+.form-select {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+.order-summary-total {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 0px 10px; 
+}
+.order-summary-button {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.payment-method {
+    background-color: #e0d7f5;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.entrega {
+ padding-left: 0px;
+ font-size: 24px;
+ font-weight: bold;
+}
+.horizontal-container {
+    display: flex;        /* Hacer los elementos hijos aparecer en línea */
+    justify-content: flex-start; /* Alinearlos a la izquierda, puedes usar flex-end o center si deseas */
+    gap: 20px;            /* Añadir espacio entre los selects, ajusta el valor según tus necesidades */
+}
+
+.form-select {
+    width: 300px;         /* Ancho del select */
+    padding: 8px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column; /* Coloca el texto "Distrito" encima del select */
+    align-items: center; /* Alinea el contenido al centro (ajustable según el diseño) */
+    font-size: 18px;
+}
+.dedire {
+    padding-top: 30px;
+    font-size: 18px;
+}
+.horizontal1-container {
+    display: flex;        /* Hacer los elementos hijos aparecer en línea */
+    justify-content: flex-start; /* Alinearlos a la izquierda, puedes usar flex-end o center si deseas */
+    gap: 20px;
+}
+.form-control {
+    width: 500px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    padding: 10px ;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.form-group2 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.payment-methods {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 790px;
+    margin: 20px auto;
+    margin-left: 350px;
+}
+
+.payment-methods h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.payment-methods p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.info-alert {
+    background-color: #eef6ff;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-alert .icon-info {
+    background: url no-repeat center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.payment-option {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.payment-option .option-header {
+    display: flex;
+    align-items: center;
+}
+
+.payment-option img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.payment-option span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.expandable-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.payment-option.active .expandable-content {
+    display: block;
+}
+
+.formulario-entrega {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    margin-left: 340px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
