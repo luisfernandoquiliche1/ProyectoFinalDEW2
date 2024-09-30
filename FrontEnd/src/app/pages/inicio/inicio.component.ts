@@ -19,7 +19,7 @@ export class InicioComponent {
     //variables con estructuras sin definir
     products: any[] = []
     images: any[] = []
-    pageSize = 12; 
+    pageSize = 18; 
     currentPage = 1; 
 
   //metodo que usaremos para obtener productos

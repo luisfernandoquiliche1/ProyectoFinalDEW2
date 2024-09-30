@@ -15,11 +15,20 @@
     justify-content: center;
     align-items: center; /* Centra el contenido verticalmente */
     overflow: hidden; /* Evita que el contenido sobresalga */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para la transformación y opacidad */
+}
+
+.fondoProductos:hover{
+    transform: scale(1.05);
 }
 
 .imagen-producto {
     text-align: center; /* Centra el contenido de texto */
     width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.imagen-producto img:hover{
+    transform: scale(1.10);
 }
 
 .imagen-producto img{
@@ -28,6 +37,7 @@
     object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin desbordar */
     display: block;
     margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para la transformación y opacidad */
 }
 
 .imagen-producto a{
@@ -51,6 +61,11 @@
 .tituloProducto{
     font-weight:bold;
     color: rgb(52, 76, 115);
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para la transformación y opacidad */
+}
+
+.tituloProducto:hover{
+    color: rgb(64, 168, 140);
 }
 
 .MarcaProducto{
