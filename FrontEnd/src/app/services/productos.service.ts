@@ -15,9 +15,8 @@ export class ProductosService {
     return this.http.get("http://localhost:8085/backend-upc/products",{responseType:"json"})
   }
 
+  __GetProduct(param : string){
+    return this.http.get("http://localhost:8085/backend-upc/product?id="+ param,{responseType:"json"})
+  }
 
-  // private readonly baseUrl = 'http://localhost:8085/backend-upc/images';
-  // __GetImagesbyProduct(productID: number) : Observable<any>{
-  //   return this.http.get(`${this.baseUrl}?productID=${productID}`,{responseType:"json"})
-  // }
 }

@@ -10,4 +10,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'FrontEnd';
+
+  dropdownText: string = 'TODO';
+  updateDropdownText(value: string) {
+    this.dropdownText = value;
+  }
 }

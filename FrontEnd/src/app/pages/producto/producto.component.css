@@ -1,0 +1,150 @@
+.thumbnail-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 600px; /* Ancho máximo deseado */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    border: 1px solid #dddddd92; /* Bordes para visualizar el contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: white;
+}
+
+.thumbnail-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column;
+    width: 120px; /* Ancho fijo */
+    height: 120px; /* Altura fija */
+    margin: 10px; /* Espaciado entre elementos */
+    overflow: hidden; /* Evita que el contenido desborde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.thumbnail-list img {
+    width: 80%; /* Se ajusta al ancho del li */
+    height: 80%; /* Se ajusta a la altura del li */
+    object-fit: contain; /* Mantiene la proporción y recorta si es necesario */
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s;
+}
+
+.thumbnail-list img:hover {
+    border: 1px solid #007bff; /* Cambia el borde al pasar el mouse */
+    transform: scale(1.1); /* Aplica el zoom al pasar el mouse */
+}
+
+.main-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Establece una altura mínima */
+}
+
+.main-image img {
+    width: 90%; /* Se ajusta al ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    max-height: 400px; /* Altura máxima */
+    object-fit: contain; /* Ajusta sin recortar */
+    transition: transform 0.8s ease, border 0.3s;
+}
+
+.main-image img:hover {
+    transform: scale(1.1); /* Aplica el zoom del 10% */
+}
+
+.overlay {
+    display: flex;
+    align-items: baseline;
+    opacity: 0.5;
+    color: rgb(136, 136, 136);
+    font-size: 14px;
+    justify-content: end;
+}
+
+.card-body {
+    background: rgba(243, 243, 243, 0.72);
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.products-section {
+    padding-top: 154px;
+    height: 93.25vh;
+}
+
+.fondoImagenesMain {
+    background-color: white;
+    height: 550px; /* Altura fija */
+    width: 100%; /* O un ancho fijo si es necesario */
+    max-width: 100%; /* Asegura que no exceda el contenedor principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dddddd;
+    overflow: hidden; /* Evita que el contenido desborde */
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    margin-bottom: 20px; /* Espaciado inferior entre el bloque de detalles y el precio */
+}
+
+.product-detail span {
+    margin-bottom: 10px; /* Espacio entre cada span */
+    font-size: 16px; /* Tamaño de fuente para los spans */
+    color: #333; /* Color del texto */
+}
+
+.btn-add-cart {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.btn-add-cart:hover:not(.disabled) {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.disabled {
+    background-color: #ccc; /* Color para botones deshabilitados */
+    cursor: not-allowed; /* Cursor de no permitido */
+}
+
+.fondoDetallesProducto{
+    background-color: #eddd8e30;
+    max-width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: start;
+    flex-direction: column;
+    text-align: center;
+    height: 550px;
+    padding-top: 50px;
+    border-radius: 5%;
+}
+
+.principalFondo{
+    display: block;
+    justify-content: center;
+
+}
+
+.tituloProducto{
+    font-size: 28px;
+    font-weight: bolder;
+    color: #2d5784;
+    /* font-family: "Oswald", sans-serif; */
+    font-family: "Edu QLD Beginner";
+    padding-bottom:20px;
+
+}

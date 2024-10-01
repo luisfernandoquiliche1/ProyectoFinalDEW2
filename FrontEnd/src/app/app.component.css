@@ -36,7 +36,6 @@
     color: rgb(141, 141, 141);
     background-color: #fede86;
     border-color: none;
-    font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
 }
 
@@ -88,4 +87,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn-login:hover{
+    background-color: #44c51581; 
+}
+
+.btn-shippingCart:hover{
+    background-color: #44c51581; 
 }
