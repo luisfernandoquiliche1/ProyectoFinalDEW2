@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <!-- Caja de marcas disponibles -->
+            <div class="marcas-container mt-4">
+                <h3 class="titulo-marcas">Marcas Disponibles</h3>
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li *ngFor="let marca of marcasCol1">{{ marca }}</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li *ngFor="let marca of marcasCol2">{{ marca }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="titulo-contenedor">
+                <h2 class="tituloCategoria">{{ categoria }}</h2> <!-- Título de la categoría -->
+            </div>
+            <div class="row">
+                <!-- Lista de productos -->
+                <div *ngFor="let producto of productos" class="col-3 p-2 fondoCol">
+                    <div class="fondoProductos">
+                        <div class="imagen-producto pt-3">
+                            <a href="">
+                                <img *ngIf="producto.images && producto.images.length > 0" [src]="producto.images[0]?.RUTA" alt="Producto">
+                                <span class="tituloProducto">{{ producto.NOMBRE }}</span>
+                                <span class="MarcaProducto">{{ producto.MARCA }}</span>
+                                <div class="fondoPrecio">
+                                    <span class="PrecioSimbolo">S/.</span>
+                                    <span class="PrecioProducto">{{ formatPrice(producto.PRECIO) }}</span>
+                                </div>
+                                <span class="PrecioAntes">Antes: S/. {{ formatPrice(calcularPrecioAntiguo(producto.PRECIO)) }}</span>
+                                <span class="OtrosDetallesProducto">Quedan: {{ producto.STOCK }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles de Paginación -->
+            <div class="pagination-controls">
+                <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+                <span class="marcadorPaginado">Página {{ currentPage }}</span>
+                <button (click)="nextPage()" [disabled]="currentPage * pageSize >= productos.length">Siguiente</button>
+            </div>
+        </div>
+    </div>
+</div>
