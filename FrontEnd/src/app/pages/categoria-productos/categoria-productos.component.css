@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+.fondoCol{
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+.fondoProductos {
+    height: 300px;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+}
+
+.imagen-producto {
+    text-align: center; /* Centra el contenido de texto */
+    width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.imagen-producto img{
+    max-width: auto;
+    height: 120px;
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin desbordar */
+    display: block;
+    margin: 0 auto;
+}
+
+.imagen-producto a{
+    text-decoration: none;
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Colocar imagen y texto en columna */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.imagen-producto a span{
+    display: -webkit-box; /* Usar flexbox para permitir el truncado */
+    -webkit-box-orient: vertical; /* Orientación vertical */
+    -webkit-line-clamp: 2; /* Limitar a 2 líneas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+    max-width: 80%; /* Limita el ancho del span */
+    padding-top: 0.5rem;
+    align-items: center;
+}
+
+.tituloProducto{
+    font-weight:bold;
+    color: rgb(52, 76, 115);
+}
+
+.MarcaProducto{
+    font-weight:700;
+    color: rgb(141, 171, 220);
+}
+
+.PrecioProducto{
+    font-weight:700;
+    color: rgb(255, 255, 255);
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.OtrosDetallesProducto{
+    font-weight:500;
+    color: rgb(141, 171, 220);
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.PrecioAntes{
+    font-weight:400;
+    font-size: 11px;
+    color: rgb(175, 176, 177);
+}
+
+.fondoPrecio {
+    width: 100px;
+    height: 30px;
+    background-color: #303C63;
+    display: flex; /* Cambiado a flex para alinear los elementos en una fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: white;
+    padding: 0.1rem; /* Añadir un poco de espacio interno */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
+
+.PrecioSimbolo {
+    margin-right: 0.2rem; /* Espacio entre el símbolo y el precio */
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #303C63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.marcadorPaginado{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.bodyContent {
+    display: block;
+    min-height: 100vh; 
+    padding-bottom: 60px; 
+}
+
+.container {
+    margin-top: 170px; 
+}
+
+.imagen-producto img {
+    transition: transform 0.3s ease; 
+}
+
+.imagen-producto:hover img {
+    transform: scale(1.1); 
+}
+
+.titulo-contenedor {
+    position: relative;
+    text-align: center; 
+    margin: 10px 0px; 
+}
+
+.tituloCategoria {
+    position: relative; 
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 2.5rem; 
+    color: rgba(21, 0, 114, 0.9); 
+    text-shadow: 2px 2px 4px rgba(101, 108, 211, 0.7); 
+    font-family: 'Helvetica', sans-serif; 
+    font-weight: bold; 
+}
+
+.marcas-container {
+    background-color: #ffffff; 
+    border: 1px solid #f80606; 
+    border-radius: 8px; 
+    padding: 15px; 
+    box-shadow: 0 2px 4px rgba(119, 241, 5, 0.1);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 330px; 
+    margin: auto; /
+}
+
+.marcas-container h3 {
+    margin: 0; 
+    margin-bottom: 15px; 
+    text-align: center; 
+}
+
+.marcas-container ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.marcas-container li {
+    margin-bottom: 10px; 
+    font-size: 1.1rem; 
+    color: #000000; 
+}
+
+.titulo-marcas {
+    font-weight: bold; 
+    text-align: center; 
+    color: #ff0a0a; 
+    margin-bottom: 15px; 
+}

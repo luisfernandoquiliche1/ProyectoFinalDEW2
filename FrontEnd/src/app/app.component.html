@@ -83,14 +83,13 @@
     </div>
     <div class="offcanvas-body">
       <ul class="list-group">
-       <a routerLink="categorias">
-          <li class="list-group-item" *ngFor="let categoria of categorias">
-            {{ categoria.NOMBRE }}
-          </li>
-        </a>
+        <li 
+          class="list-group-item" 
+          *ngFor="let categoria of categorias" 
+          (click)="irACategoria(categoria)">
+          {{ categoria.NOMBRE }}
+        </li>
       </ul>
     </div>
   </div>
 </div>
-
-  

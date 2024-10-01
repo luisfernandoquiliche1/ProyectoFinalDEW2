@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ProductosService } from '../../services/productos.service';
 import { ImagenesService } from '../../services/imagenes.service';
 import { CategoriasService } from '../../services/categorias.service';
+import { BuscarcategoriaService } from '../../services/buscarcategoria.service';
 
 @Component({
   selector: 'app-inicio',
@@ -15,7 +16,8 @@ export class InicioComponent {
   constructor(
     private readonly ps: ProductosService,
     private readonly is: ImagenesService,
-    private readonly cs: CategoriasService
+    private readonly cs: CategoriasService,
+    private readonly bc: BuscarcategoriaService
   ){}
 
     //variables con estructuras sin definir

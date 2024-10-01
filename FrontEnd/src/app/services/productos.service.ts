@@ -15,6 +15,10 @@ export class ProductosService {
     return this.http.get("http://localhost:8085/backend-upc/products",{responseType:"json"})
   }
 
+  __GetProductsByCategory(category: string) {
+    return this.http.get(`http://localhost:8085/backend-upc/products-by-category?category=${category}`, { responseType: "json" });
+}
+
 
   // private readonly baseUrl = 'http://localhost:8085/backend-upc/images';
   // __GetImagesbyProduct(productID: number) : Observable<any>{

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CategoriasService } from './services/categorias.service';
 import { CommonModule } from '@angular/common';
@@ -8,24 +9,28 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet, RouterLink, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'FrontEnd';
+  categorias: any[] = [];
+
   constructor(
     private readonly cs: CategoriasService,
-  ){}
+    private router: Router // Inyecta el Router
+  ) {}
 
-  categorias: any[] = []
-
-  __be_GetCategorias(){
+  __be_GetCategorias(): void {
     this.cs.__GetCategorias().subscribe((rpta: any) => {
       this.categorias = rpta.data;
-    })
-    console.log(this.categorias)
+    });
   }
 
-  ngOnInit(): void{
-    this.__be_GetCategorias()
+  ngOnInit(): void {
+    this.__be_GetCategorias();
+  }
+
+  irACategoria(categoria: any) {
+    this.router.navigate([`categorias/${categoria.NOMBRE}`]); // Asegúrate de usar un identificador válido
   }
 }

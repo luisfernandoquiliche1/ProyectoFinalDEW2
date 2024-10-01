@@ -1,0 +1,40 @@
+.offcanvas {
+    background-color: #ffffff; 
+    color: #04207c;
+    font-family: 'Lato', sans-serif;
+}
+
+.offcanvas-header {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    border-bottom: 1px solid #dee2e6; 
+    position: relative; 
+}
+
+.offcanvas-title {
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    text-align: center;
+    flex-grow: 1; 
+}
+
+.list-group-item {
+    background-color: transparent; 
+    border: none; 
+    padding: 15px; 
+    transition: background-color 0.45;
+}
+
+.list-group-item:hover {
+    background-color: #3c87f8; 
+    color: rgb(255, 255, 255); 
+}
+
+.btn-close {
+    position: absolute; 
+    right: 15px; 
+    top: 10px; 
+    filter: brightness(0) invert(1); 
+}
