@@ -1,0 +1,25 @@
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupa toda la altura */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.contenido {
+    padding-top: 150px;
+}
+
+.content-container {
+    width: 100%; /* Ancho del contenedor */
+    height: 64vh; 
+    overflow-y: auto; /* Agrega barra de desplazamiento vertical si es necesario */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Opcional: para destacar el contenedor */
+    margin-top: 20px 0; /* Espacio entre el encabezado y el contenedor */
+    font-size: 14px;
+}
+
+.card {
+    margin: 0; /* Elimina el margen si no lo deseas */
+}
+

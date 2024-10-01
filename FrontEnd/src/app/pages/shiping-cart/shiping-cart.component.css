@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0px auto;
+    padding: 0px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.cart, .order-summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cart {
+    width: 65%;
+}
+.order-summary {
+    width: 30%;
+    height: 50%;
+}
+.cart-header, .order-summary-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.cart-header span {
+    font-size: 16px;
+    color: #666;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.cart-item-details {
+    flex-grow: 1;
+}
+.cart-item-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.cart-item-subtitle {
+    color: #666;
+    margin-bottom: 10px;
+}
+.cart-item-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+.cart-item-old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+.cart-item-discount {
+    color: #fff;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+.cart-item-quantity button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.cart-item-quantity input {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+.form-select {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+.order-summary-total {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 0px 10px; 
+}
+.order-summary-button {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.payment-method {
+    background-color: #e0d7f5;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.entrega {
+    padding-left: 0px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-select, .form-control {
+    width: 262px; /* Ancho de los selects y inputs */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.form-group, .form-group2 {
+    display: flex;
+    flex-direction: column; /* Coloca el label encima del input */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    margin-bottom: 10px; /* Espacio entre los grupos */
+}
+
+.dedire {
+    padding-top: 0px; /* Espacio superior */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+.horizontal-container, .horizontal1-container {
+    display: flex; /* Cambia a flex para que los hijos se alineen en fila */
+    gap: 10px; /* Espacio entre los selects */
+    margin-bottom: 20px; /* Espacio entre la fila de selects y otros elementos */
+}
+
+.payment-methods {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 65%;
+}
+
+.payment-methods h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.payment-methods p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.info-alert {
+    background-color: #eef6ff;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-alert .icon-info {
+    background: url no-repeat center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.payment-option {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.payment-option .option-header {
+    display: flex;
+    align-items: center;
+}
+
+.payment-option img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.payment-option span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.expandable-content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.payment-option.active .expandable-content {
+    display: block;
+}
+
+.formulario-entrega {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 65%;
+}
+
+.form-group label, .form-group2 label {
+    font-size: 16px;
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+}
+
+.direccionInput{
+    width: 100%;
+    font-size: 16px;
+}

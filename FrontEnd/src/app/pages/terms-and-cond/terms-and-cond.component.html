@@ -1,83 +1,105 @@
+<div class="container">
+    <div class="row">
+        <div class="contenido">
+            <div class="d-flex text-center justify-content-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item text-center"><a href="#" >X-Digital</a></li>
+                    <li class="breadcrumb-item active">Nuestros {{caseContent(activeContent)}}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
 
-<div class="py-6" style="padding: 5px 30px;">
-    <nav class="text-sm mb-3">
-        <a href="#" class="text-black  fs-7 text-decoration-none text-body-secondary">X-Digital</a> &gt; <span class="text-black fw-bold">Términos y Condiciones</span></nav>
+    <div class="text-center"><h2>{{caseContent(activeContent)}}</h2></div>
+
+    <div class="d-flex justify-content-center gap-1 mt-4">
+        <button class="btn btn-primary" type="button" (click)="showContent('terms')">Términos y condiciones</button>
+        <button class="btn btn-primary" type="button" (click)="showContent('products')">Productos y Precios</button>
+        <button class="btn btn-primary" type="button" (click)="showContent('delivery')">Políticas de Entrega</button>
+    </div>
+
+    <div class="content-container mt-4">
+        <div *ngIf="activeContent === 'terms'" class="content">
+            <div class="card card-body">
+                <p>En el presente documento se describe los “Términos y Condiciones” generales; así mismo, las políticas de privacidad aplicables al acceso y uso de los servicios brindados por Importaciones X-Digital dentro del sitio 
+                    <a href="https://www.xdigital.com.pe" target="_blank">www.xdigital.com.pe</a>, sus subdominios y/u otros dominios (anexos url) relacionados (en adelante como "xdigital.com.pe" o el "Sitio"), en donde estos Términos y Condiciones se encuentren.
+                </p>
+
+                <p>Cualquier persona que desee acceder y/o suscribirse, para poder usar el Sitio o los Servicios podrá hacerlo sujetándose a los Términos y Condiciones Generales y las Políticas de Privacidad, junto con todas las demás políticas y principios que rigen impacto.com.pe y que son incorporados al presente directamente o por referencia o que son explicados y/o detallados en otras secciones del Sitio.</p>
+            
+                <p>En consecuencia, todas las visitas y todos los contratos y transacciones que se realicen en este Sitio, así como sus efectos jurídicos, quedarán regidos por estas reglas y sometidos a la legislación aplicable en Perú.</p>
+            
+                <p>El Usuario debe leer, entender y aceptar todas las condiciones establecidas en los Términos y Condiciones Generales y en las Políticas de Privacidad de X-Digital así como en los demás documentos incorporados a los mismos por referencia, previo a su registro como Usuario de impacto.com.pe y/o a la adquisición de productos y entrega de cualquier dato, quedando sujetos a lo señalado y dispuesto en los Términos y Condiciones.</p>
+            
+                <p>Cuando usted visita xdigital.com.pe se está comunicando con importaciones X-Digital de manera electrónica. En ese sentido, usted brinda su consentimiento y conformidad total al aceptar los términos y condiciones anteriormente mencionados, y promete regirse a ellos bajo cualquier circunstancia; así mismo, nos da su aprobación para recibir comunicaciones de importaciones Impacto por correo electrónico o mediante la publicación de avisos en su portal.</p>
+            
+                <p>En el presente documento se describe los “Términos y Condiciones” generales; así mismo, las políticas de privacidad aplicables al acceso y uso de los servicios brindados por X-Digital dentro del sitio 
+                    <a href="https://www.xdigital.com.pe" target="_blank">www.xdigital.com.pe</a>, sus subdominios y/u otros dominios (anexos url) relacionados (en adelante como "xdigital.com.pe" o el "Sitio"), en donde estos Términos y Condiciones se encuentren.
+                </p>
+            
+                <p>Cualquier persona que desee acceder y/o suscribirse, para poder usar el Sitio o los Servicios podrá hacerlo sujetándose a los Términos y Condiciones Generales y las Políticas de Privacidad, junto con todas las demás políticas y principios que rigen xdigital.com.pe y que son incorporados al presente directamente o por referencia o que son explicados y/o detallados en otras secciones del Sitio.</p>
+            
+                <p>En consecuencia, todas las visitas y todos los contratos y transacciones que se realicen en este Sitio, así como sus efectos jurídicos, quedarán regidos por estas reglas y sometidos a la legislación aplicable en Perú.</p>
+            
+                <p>El Usuario debe leer, entender y aceptar todas las condiciones establecidas en los Términos y Condiciones Generales y en las Políticas de Privacidad de Importaciones X-Digital así como en los demás documentos incorporados a los mismos por referencia, previo a su registro como Usuario de impacto.com.pe y/o a la adquisición de productos y entrega de cualquier dato, quedando sujetos a lo señalado y dispuesto en los Términos y Condiciones.</p>
+            
+                <p>Cuando usted visita xdigital.com.pe se está comunicando con X-Digital de manera electrónica. En ese sentido, usted brinda su consentimiento y conformidad total al aceptar los términos y condiciones anteriormente mencionados, y promete regirse a ellos bajo cualquier circunstancia; así mismo, nos da su aprobación para recibir comunicaciones de importaciones Impacto por correo electrónico o mediante la publicación de avisos en su portal.</p>               
+            </div>
+        </div>
+        
+        <div *ngIf="activeContent === 'products'" class="content">
+            <div class="card card-body">
+                    <p>Los clientes registrados en X-Digital han ingresado voluntariamente sus datos, los cuales se asumen reales y actualizados. La validación de esta información es de exclusiva responsabilidad del cliente.</p>
+
+                    <p>Como parte de nuestra actividad, tratamos datos personales en cumplimiento con lo dispuesto en la Ley 29733 – Ley de Protección de Datos Personales, su Reglamento, aprobado por Decreto Supremo 003-2013-JUS, y sus normas complementarias y modificatorias (todas éstas en adelante definidas como la “Normativa de Protección de Datos Personales” ).</p>
+        
+                    <p>Los datos personales cuyo tratamiento realizamos son almacenados en bancos de datos personales de titularidad de X-Digital</p>
+        
+                    <p>Un cliente de X-Digital puede dejar de serlo por determinación de X-Digital y sin requerir una expresión de causa.</p>
+        
+                    <p>Los distribuidores o clientes de Importaciones X-Digital aceptan la presente política comercial y de distribución con el sólo hecho de comprar y/o recibir una factura o boleta de Importaciones X-Digital</p>                
+            </div>
+        </div>
+
+        <div *ngIf="activeContent === 'delivery'" class="content">
+            <div class="card card-body">
+                <p>Realizada la compra, nuestros plazos de entrega serán como máximo 4 días hábiles una vez efectuada la cancelación de su pedido en nuestras cuentas corrientes, esto es lo correspondiente a las entregas en la ciudad de Lima Metropolitana. Y en relación con nuestros envíos a provincia, el tiempo será como máximo 4 días hábiles hasta la entrega en la agencia de transporte que usted haya seleccionado.</p>
+            
+                <p>Se le enviará vía correo electrónico o celular, solo en el caso de los envíos a provincia, la guía de remisión de la agencia correspondiente que usted haya seleccionado.</p>
+
+                <h3>Horarios de Entrega</h3>
+                <p>Nuestros horarios de entrega en Lima Metropolitana son de lunes a sábado de 10 am a 6 pm en lo distritos seleccionados.</p>
+
+                <h3>Cobertura de Entrega</h3>
+                <p>Nuestra cobertura de envíos es a nivel nacional por intermedio de las empresas de transporte asociadas a X-Digital y nuestra cobertura en la ciudad de Lima corresponde a los distritos que se encuentran en nuestra página web  
+                    <a href="https://www.xdigital.com.pe">www.xdigital.com.pe</a>.
+                </p>
+
+                <h2>Medios de Entrega</h2>
+                    <ul>
+                        <li><strong>Recojo en tienda:</strong> En la dirección que aparece en nuestra página web.</li>
+                        <li><strong>Envíos delivery:</strong> Con unidades motorizadas y móviles en Lima y sus distritos mencionados en nuestra página web.</li>
+                        <li><strong>Envíos a provincia:</strong> Por medio de las agencias de transporte elegidas por nuestros clientes.</li>
+                    </ul>
+
+                <h3>Modo de Confirmación de Entrega</h3>
+                    <ul>
+                        <li><strong>Recojo en tienda:</strong> Sello de entregado y firma del cliente como señal de conformidad de precio y cantidad de su compra.</li>
+                        <li><strong>Envíos delivery:</strong> Firma del cliente como señal de conformidad de precio y cantidad de su compra.</li>
+                        <li><strong>Envíos a provincia:</strong> Enviamos mediante correo y celular la guía de remisión de la empresa de transporte elegida por el cliente como señal de la entrega del pedido.</li>
+                    </ul>
+
+                <h3>Costos Relacionados a la Entrega</h3>
+                <p>Los precios de envío varían según el distrito, y se muestran al momento de la compra. No hay costo adicional para el recojo en tienda ni para los envíos a provincia.</p>
+
+                <h3>Forma de Pago</h3>
+                <p>Nuestros productos y servicios ofrecidos en la Tienda Virtual <a href="https://www.xdigital.com.pe">www.xdigital.com.pe</a> podrán cancelarse en dos modalidades:</p>
+                    <ul>
+                        <li><strong>Pagos en línea:</strong> Pago utilizando tarjetas de crédito y/o débito.</li>
+                        <li><strong>Tarjetas aceptadas:</strong> Tarjetas de Crédito y/o Débito VISA, MasterCard, Diners Club, American Express.</li>
+                    </ul>
+                <p>El uso de las tarjetas mencionadas se sujetará a lo establecido en estos Términos y Condiciones, en relación con su emisor y los respectivos Contratos de Apertura y Reglamento de Uso.</p>              
+            </div>
+        </div>
+    </div>
 </div>
-<body>
-    <div class="text-center">
-        <u class="fs-2">Términos y Condiciones</u>
-    </div>
-    <div style="padding: 20px 30px;">
-        <p>
-            <strong class="fs-6">Introducción</strong>
-        </p>
-        <p >
-            Bienvenido a X-Digital Importaciones. Estos términos y condiciones regulan el acceso y uso de nuestro sitio web y la compra de productos a través de nuestra tienda en línea. Al utilizar nuestro sitio web y/o realizar una compra, aceptas cumplir con estos términos y condiciones en su totalidad. Por favor, lee detenidamente este documento antes de realizar una compra.
-        </p>
-        <p style="margin-top: 30px;">
-            <strong>Productos y Descripciones</strong>
-        </p>
-        <ul >
-            <li>Todos los productos disponibles en nuestro sitio web están descritos con la mayor precisión posible. Sin embargo, no garantizamos que las descripciones sean completamente exactas, completas, actuales o libres de errores.</li>
-            <li>Las imágenes de los productos son ilustrativas y pueden no representar con precisión el producto final.</li>
-            <li>La disponibilidad de los productos está sujeta a cambios sin previo aviso, y nos reservamos el derecho de limitar las cantidades disponibles para la venta de cualquier producto.</li>
-        </ul>
-        <p style="margin-top: 30px;"> 
-            <strong>Precios y pagos</strong>
-        </p>
-        <ul>
-            <li>Todos los precios de los productos están expresados en soles e incluyen los impuestos aplicables, a menos que se indique lo contrario.</li>
-            <li>Nos reservamos el derecho de modificar los precios en cualquier momento sin previo aviso. Los precios aplicables son los vigentes en el momento de la confirmación del pedido.</li>
-            <li>Aceptamos diversas formas de pago, incluyendo tarjetas de crédito, tarjetas de débito y billetera digital en nuestro sitio web.</li>
-            <li>Al realizar una compra, autorizas a cargar el monto total en el método de pago seleccionado. Todos los pagos deben ser completados y aprobados antes del envío de los productos.</li>
-        </ul>
-        <p style="margin-top: 30px;">
-            <strong>Proceso de compra</strong>
-        </p>
-        <ul>
-            <li> Para realizar una compra, debes seguir el procedimiento en línea en nuestro sitio web y proporcionar la información requerida, como nombre, dirección de envío, método de pago, entre otros.</li>
-            <li> Una vez realizado el pedido, recibirás un correo electrónico de confirmación con los detalles del pedido. Este correo no constituye la aceptación del pedido, sino una confirmación de la recepción del mismo.</li>
-            <li>La aceptación del pedido se producirá una vez que hayamos verificado la disponibilidad de los productos y completado el proceso de pago. Nos reservamos el derecho de rechazar o cancelar un pedido por cualquier motivo, incluyendo errores en los precios o en la disponibilidad de los productos.</li>
-        </ul>
-        <p style="margin-top: 30px;">
-            <strong>Devoluciones</strong>
-        </p>
-        <ul>
-            <li>Aceptamos devoluciones de productos dentro de los 14 días naturales desde la fecha de entrega, siempre y cuando el producto esté en su estado original, sin uso, con todos sus accesorios, manuales y en su embalaje original.</li>
-            <li>Para iniciar un proceso de devolución, debes contactarnos a través de correo electrónico de nosotros o número de teléfono para recibir instrucciones detalladas.</li>
-            <li>Los costos de envío por devoluciones serán responsabilidad del cliente, salvo en casos de errores en el pedido o productos defectuosos.</li>
-        </ul>
-        <p style="margin-top: 30px;">
-            <strong>Cambios</strong>
-        </p>
-        <ul>
-            <li>Los cambios de productos están sujetos a la disponibilidad de los mismos y se realizarán únicamente si el producto a cambiar está en perfecto estado, en su embalaje original y sin signos de uso.</li>
-            <li>Los costos de envío asociados con cambios de productos serán cubiertos por el cliente, salvo en casos de productos defectuosos o errores cometidos por nuestra parte.</li>
-        </ul>
-        <p style="margin-top: 30px;">
-            <strong>Reembolsos</strong>
-        </p>
-        <ul>
-            <li>Los reembolsos se procesarán dentro de los 14 días hábiles desde la recepción y verificación de los productos devueltos.</li>
-            <li>El reembolso se realizará utilizando el mismo método de pago utilizado en la compra original, a menos que se acuerde lo contrario.</li>
-            <li>Los costos de envío originales no son reembolsables, a menos que la devolución sea debida a un error nuestro o a productos defectuosos.</li>
-        </ul>
-        <p style="margin-top: 30px;">
-            <strong>Garantía</strong>
-        </p>
-        <ul>
-            <li>Todos los productos vendidos en nuestra tienda cuentan con una garantía del fabricante, cuya duración y condiciones varían según el tipo de producto.</li>
-            <li>La garantía cubre defectos de fabricación y problemas técnicos del producto durante el período especificado por el fabricante.</li>
-            <li>La garantía no cubre daños causados por uso indebido, negligencia, manipulación incorrecta, modificaciones no autorizadas o desgaste normal del producto.</li>
-            <li>Para hacer válida la garantía, es necesario presentar la factura de compra y cumplir con los requisitos establecidos por el fabricante. Los servicios de garantía se gestionarán directamente con el fabricante o a través de los centros de servicio autorizados.</li>
-        </ul>
-        <p style="margin-top: 30px;">
-            <strong>Privacidad y Protección de Datos</strong>
-        </p>
-        <ul>
-            <li>Nos comprometemos a proteger la privacidad de nuestros clientes. Toda la información personal proporcionada será tratada de acuerdo con nuestra Política de Privacidad.</li>
-            <li>Utilizamos medidas de seguridad para proteger tus datos personales, pero no garantizamos la seguridad absoluta de la información transmitida a través de internet.</li>
-            <li>Los datos personales recolectados serán utilizados únicamente para procesar tus pedidos, realizar envíos y, si has dado tu consentimiento, para enviarte información promocional.</li>
-        </ul>
-    </div>
-</body>

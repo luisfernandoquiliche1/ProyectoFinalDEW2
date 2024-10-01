@@ -7,6 +7,7 @@ import { TermsAndCondComponent } from './pages/terms-and-cond/terms-and-cond.com
 import { CategoriasComponent } from './pages/categorias/categorias.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { CategoriaProductosComponent } from './pages/categoria-productos/categoria-productos.component';
+import { ShipingCartComponent } from './pages/shiping-cart/shiping-cart.component';
 
 export const routes: Routes = [
     {path: "", redirectTo: 'inicio', pathMatch:'full'},
@@ -17,5 +18,6 @@ export const routes: Routes = [
     {path: "categorias", component: CategoriasComponent},
     {path: "product/:id", component:ProductoComponent},
     {path: "t&c", component:TermsAndCondComponent},
-    {path: 'categorias/:id', component: CategoriaProductosComponent}
+    {path: 'categorias/:id', component: CategoriaProductosComponent},
+    {path:'carrito', component:ShipingCartComponent}
 ];

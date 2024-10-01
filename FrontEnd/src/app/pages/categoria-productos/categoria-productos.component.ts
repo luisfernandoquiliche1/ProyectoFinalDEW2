@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BuscarcategoriaService } from '../../services/buscarcategoria.service';
 import { CommonModule } from '@angular/common';
 import { ProductosService } from '../../services/productos.service';
@@ -9,7 +9,7 @@ import { CategoriasService } from '../../services/categorias.service';
 @Component({
   selector: 'app-categoria-productos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './categoria-productos.component.html',
   styleUrls: ['./categoria-productos.component.css']
 })

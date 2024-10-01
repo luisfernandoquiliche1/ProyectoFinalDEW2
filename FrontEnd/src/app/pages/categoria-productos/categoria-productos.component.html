@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"></div>
     <div class="row">
         <div class="col-4">
             <!-- Caja de marcas disponibles -->
@@ -27,7 +27,7 @@
                 <div *ngFor="let producto of productos" class="col-3 p-2 fondoCol">
                     <div class="fondoProductos">
                         <div class="imagen-producto pt-3">
-                            <a href="">
+                            <a routerLink="/product/{{producto.IDPRODUCTO}}">
                                 <img *ngIf="producto.images && producto.images.length > 0" [src]="producto.images[0]?.RUTA" alt="Producto">
                                 <span class="tituloProducto">{{ producto.NOMBRE }}</span>
                                 <span class="MarcaProducto">{{ producto.MARCA }}</span>
@@ -43,12 +43,11 @@
                 </div>
             </div>
 
-            <!-- Controles de Paginación -->
-            <div class="pagination-controls">
-                <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
-                <span class="marcadorPaginado">Página {{ currentPage }}</span>
-                <button (click)="nextPage()" [disabled]="currentPage * pageSize >= productos.length">Siguiente</button>
-            </div>
+        <!-- Controles de Paginación -->
+        <div class="pagination-controls">
+            <button (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+            <span class="marcadorPaginado">Página {{ currentPage }}</span>
+            <button (click)="nextPage()" [disabled]="currentPage * pageSize >= productos.length">Siguiente</button>
         </div>
     </div>
 </div>

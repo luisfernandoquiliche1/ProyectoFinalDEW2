@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 53px;
+    justify-content: end;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media h2 {
+    margin-bottom: 10px;
+}
+
+.social-btn-fb, .social-btn-wa, .social-btn-go, .social-btn-inst {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-btn-fb:hover {
+    color: #007bff;
+}
+
+.social-btn-go:hover {
+    color: #9b2222;
+}
+
+.social-btn-wa:hover {
+    color: #18984d;
+}
+
+.social-btn-inst:hover {
+    color: #ff991d;
+}
+
+.contenedorForm{
+    height: 685px;
+}
+
+.fondoForm {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.fondoMap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2%;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, rgba(4, 41, 80, 0.719), rgba(0, 87, 179, 0.463));
+    margin-top: -3.2%;
+
+}
+
+.backFondo {
+    background-image: url('https://img.freepik.com/vector-premium/fondo-tecnologia-abstracto-blanco-gris-alta-tecnologia-comunicacion-conexion-digital-alta-tecnologia_262356-480.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 91.5vh; /* Ominimum height para cubrir toda la vista */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex; /* Flex para alinear el contenido */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.contact-info {
+    margin-top: 20px; /* Espacio entre el mapa y la información de contacto */
+}
+
+.reflejar {
+    transform: scaleX(-1);
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
