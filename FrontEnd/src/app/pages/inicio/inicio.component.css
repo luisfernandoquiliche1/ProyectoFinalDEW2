@@ -149,3 +149,32 @@
     min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
     padding-bottom: 60px; /* Espacio para el footer si es necesario */
 }
+
+.fondoProductos {
+    position: relative; /* Asegura que el carrito se posicione relativo al producto */
+    overflow: hidden; /* Evita que el ícono sobresalga */
+}
+
+.carrito-icon {
+    position: absolute; /* Posiciona el carrito de forma absoluta */
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la izquierda */
+    background: #303C63;
+    border-radius: 50%; 
+    padding: 5px; 
+    opacity: 0; 
+    transition: opacity 0.8s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fondoProductos:hover .carrito-icon {
+    opacity: 1; 
+}
+
+.carrito-icon i {
+    font-size: 22px; /* Tamaño del ícono */
+    color: #ffffff; /* Color del ícono */
+}

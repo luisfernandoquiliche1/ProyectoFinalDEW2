@@ -99,6 +99,9 @@
                         <div *ngFor="let p of paginatedProducts" class="col-2 p-2 fondoCol">
                             <div class="fondoProductos">
                                 <div class="imagen-producto pt-3">
+                                    <div class="carrito-icon">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </div>
                                     <a routerLink="/product/{{p.IDPRODUCTO}}">
                                         <img src="{{p.images[0].RUTA}}" alt="">
                                         <span class="tituloProducto">{{p.NOMBRE}}</span>
