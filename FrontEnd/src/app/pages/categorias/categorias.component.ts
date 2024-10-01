@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CategoriasService } from '../../services/categorias.service';
 
 interface Categoria {
   id: string;
@@ -10,16 +12,25 @@ interface Categoria {
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './categorias.component.html',
   styleUrl: './categorias.component.css'
 })
 export class CategoriasComponent {
-  
-  categorias: Categoria[] = [
-    { id: '1', nombre: 'Celulares', descripcion: 'Últimos modelos de celulares.', imagen: 'celulares.jpg' },
-    { id: '2', nombre: 'Proyectores', descripcion: 'Proyectores para presentaciones y entretenimiento.', imagen: 'proyectores.jpg' },
-    { id: '3', nombre: 'Baterías', descripcion: 'Baterías para prolongar la vida de tus dispositivos.', imagen: 'baterias.jpg' },
-    { id: '4', nombre: 'Accesorios', descripcion: 'Accesorios para dispositivos móviles.', imagen: 'public/accesorios.jpg' }
-  ];
+  constructor(
+    private readonly cs: CategoriasService,
+  ){}
+
+  categorias: any[] = []
+
+  __be_GetCategorias(){
+    this.cs.__GetCategorias().subscribe((rpta: any) => {
+      this.categorias = rpta.data;
+    })
+    console.log(this.categorias)
+  }
+
+  ngOnInit(): void{
+    this.__be_GetCategorias()
+  }
 }
