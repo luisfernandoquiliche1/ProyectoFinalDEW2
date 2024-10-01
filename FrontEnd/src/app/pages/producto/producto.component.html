@@ -1,0 +1,52 @@
+<div class="principalFondo">
+    <section class="products-section">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Miniaturas -->
+                <div class="col-lg-2"></div>
+                <div class="col-lg-1 col-md-12">
+                    <ul class="thumbnail-list">
+                        <li *ngFor="let i of product.images" (click)="changeImage(i.RUTA)">
+                            <img src="{{i.RUTA}}" alt="{{ i.NOMBRE }}" class="img-fluid">
+                        </li>
+                    </ul>
+                </div> 
+                
+                <!-- Imagen principal -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="fondoImagenesMain">
+                        <div class="main-image">
+                            <img id="productImage" [src]="selectedImage" alt="Producto" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <i class="fa fa-hand-pointer-o"></i> Imagen Referencial *
+                    </div>
+                </div>
+
+                <!-- Detalles del producto -->
+                <div class="col-lg-4">
+                    <div class="fondoDetallesProducto">
+                        <h2 class="tituloProducto">{{product.NOMBRE}}</h2>
+                        <div class="product-detail">
+                            <span><b>Marca: </b>{{product.MARCA}}</span>
+                            <span class="part-number"><b>Categoria: </b>{{product.CATEGORIA}}</span>
+                            <span><b>STOCK:</b> {{product.STOCK}} unidades</span>
+                            <h5 style="display: inline;"><b style="font-weight: bolder;">Precio </b></h5>${{formatPrice(convertPriceDolar(product.PRECIO))}} - S/{{formatPrice(product.PRECIO)}}
+                        </div>
+                        <div>
+                            <a class="btn btn-success"><i class="fa fa-cart-plus" aria-hidden="true" style="padding-right: 10px;"></i>AGREGAR AL CARRITO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<script>
+function changeImage(src) {
+    document.getElementById('productImage').src = src;
+}
+</script>

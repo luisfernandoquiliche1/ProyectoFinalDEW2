@@ -15,11 +15,20 @@
     justify-content: center;
     align-items: center; /* Centra el contenido verticalmente */
     overflow: hidden; /* Evita que el contenido sobresalga */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para la transformación y opacidad */
+}
+
+.fondoProductos:hover{
+    transform: scale(1.05);
 }
 
 .imagen-producto {
     text-align: center; /* Centra el contenido de texto */
     width: 100%; /* Asegura que ocupe el ancho completo */
+}
+
+.imagen-producto img:hover{
+    transform: scale(1.10);
 }
 
 .imagen-producto img{
@@ -28,6 +37,7 @@
     object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin desbordar */
     display: block;
     margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para la transformación y opacidad */
 }
 
 .imagen-producto a{
@@ -51,6 +61,11 @@
 .tituloProducto{
     font-weight:bold;
     color: rgb(52, 76, 115);
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para la transformación y opacidad */
+}
+
+.tituloProducto:hover{
+    color: rgb(64, 168, 140);
 }
 
 .MarcaProducto{
@@ -133,4 +148,33 @@
     display: block;
     min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
     padding-bottom: 60px; /* Espacio para el footer si es necesario */
+}
+
+.fondoProductos {
+    position: relative; /* Asegura que el carrito se posicione relativo al producto */
+    overflow: hidden; /* Evita que el ícono sobresalga */
+}
+
+.carrito-icon {
+    position: absolute; /* Posiciona el carrito de forma absoluta */
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la izquierda */
+    background: #303C63;
+    border-radius: 50%; 
+    padding: 5px; 
+    opacity: 0; 
+    transition: opacity 0.8s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.fondoProductos:hover .carrito-icon {
+    opacity: 1; 
+}
+
+.carrito-icon i {
+    font-size: 22px; /* Tamaño del ícono */
+    color: #ffffff; /* Color del ícono */
 }

@@ -1,43 +1,58 @@
-<nav class="navbar fixed-top navPrincipal" style="background-color: #303C63; height: 80px; z-index: 1000;">
+<nav class="fixed-top navPrincipal" style="background-color: #303C63; height: 80px; z-index: 1000;">
   <div class="container-fluid" >
-    <div class="col-3">
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/Logo-Xdigital-Full.png" alt="Logo" width="280" height="45" class="d-inline-block align-text-top">
-      </a>
-    </div>
-    <div class="col-6 d-flex justify-content-center align-items-center">
-      <form class="w-75">
-        <div class="input-group">
-          <button class="btn btn-custom-filtro dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Todo</button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item custom-item-li" href="#">Automotriz</a></li>
-              <li><a class="dropdown-item custom-item-li" href="#">Computadoras</a></li>
-              <li><a class="dropdown-item custom-item-li" href="#">Cine y TV</a></li>
-              <li><a class="dropdown-item custom-item-li" href="#">Electrónicos</a></li>
-              <li><a class="dropdown-item custom-item-li" href="#">Equipaje</a></li>
-              <li><a class="dropdown-item custom-item-li" href="#">Ofertas</a></li>
-            </ul>
-          <input class="form-control" type="Buscar" placeholder="Busca productos, marcas y mas..." aria-label="Buscar">
-          <i class="btn btn-custom-busqueda d-flex align-items-center fa fa-search fa-1x "></i>
+    <div class="row align-items-center">
+      <div class="col-3">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/Logo-Xdigital-Full.png" alt="Logo" width="280" height="45" class="d-inline-block align-text-top">
+        </a>
+      </div>
+
+      <div class="col-6">
+        <div class="d-flex align-items-center justify-content-center">
+            <form class="w-75">
+                <div class="input-group">
+                    <button id="dropdownButton" class="btn btn-custom-filtro dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">{{ dropdownText }}</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('TODO')">TODO</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('AUDIO')">AUDIO</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('CAMARAS Y DRONES')">CAMARAS Y DRONES</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('CELULARES')">CELULARES</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('COMPUTO')">COMPUTO</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('SMARTHOME')">SMARTHOME</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('SMARTWATCHES')">SMARTWATCHES</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('TELEVISORES')">TELEVISORES</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('VIDEOJUEGOS')">VIDEOJUEGOS</a></li>
+                        <li><a class="dropdown-item custom-item-li" (click)="updateDropdownText('ZONA GAMER')">ZONA GAMER</a></li>
+                    </ul>
+                    <input class="form-control" type="text" placeholder="Busca productos, marcas y más..." aria-label="Buscar">
+                    <i class="btn btn-custom-busqueda d-flex align-items-center fa fa-search fa-1x"></i>
+                </div>
+            </form>
         </div>
-      </form>
     </div>
-    <div class="col-1">
-    </div>
-    <div class="col-1 d-flex justify-content-center align-items-left">
-      <a routerLink="login">
-        <svg class="svg-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M12 3C9.56586 3 7.59259 4.95716 7.59259 7.37143C7.59259 9.7857 9.56586 11.7429 12 11.7429C14.4341 11.7429 16.4074 9.7857 16.4074 7.37143C16.4074 4.95716 14.4341 3 12 3Z" fill="#363853"/>
-            <path d="M14.601 13.6877C12.8779 13.4149 11.1221 13.4149 9.39904 13.6877L9.21435 13.7169C6.78647 14.1012 5 16.1783 5 18.6168C5 19.933 6.07576 21 7.40278 21H16.5972C17.9242 21 19 19.933 19 18.6168C19 16.1783 17.2135 14.1012 14.7857 13.7169L14.601 13.6877Z" fill="#363853"/>
-        </svg>
-      </a>
-    </div>
-    <div class="col-1 d-flex justify-content-center align-items-left">
-      <svg class="svg-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M4.46785 10.2658C4.47574 10.3372 4.48376 10.4094 4.49187 10.4823L4.61751 11.6131C4.7057 12.4072 4.78218 13.0959 4.91562 13.6455C5.05917 14.2367 5.29582 14.7937 5.78931 15.2354C6.28281 15.6771 6.86251 15.8508 7.46598 15.9281C8.02694 16.0001 8.71985 16 9.51887 16H14.8723C15.4201 16 15.9036 16 16.3073 15.959C16.7448 15.9146 17.1698 15.8162 17.5785 15.5701C17.9872 15.324 18.2731 14.9944 18.5171 14.6286C18.7422 14.291 18.9684 13.8637 19.2246 13.3797L21.7141 8.67734C22.5974 7.00887 21.3879 4.99998 19.5 4.99998L9.39884 4.99998C8.41604 4.99993 7.57525 4.99988 6.90973 5.09287C6.5729 5.13994 6.24284 5.21529 5.93326 5.34375L5.78941 4.04912C5.65979 2.88255 4.67375 2 3.5 2H3C2.44772 2 2 2.44771 2 3C2 3.55228 2.44772 4 3 4H3.5C3.65465 4 3.78456 4.11628 3.80164 4.26998L4.46785 10.2658Z" fill="#323232"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14 19.5C14 18.1193 15.1193 17 16.5 17C17.8807 17 19 18.1193 19 19.5C19 20.8807 17.8807 22 16.5 22C15.1193 22 14 20.8807 14 19.5Z" fill="#323232"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 19.5C5 18.1193 6.11929 17 7.5 17C8.88071 17 10 18.1193 10 19.5C10 20.8807 8.88071 22 7.5 22C6.11929 22 5 20.8807 5 19.5Z" fill="#323232"/>
-    </svg>
+
+      <div class="botonesNav col-3">
+        <div class="justify-content-center align-items-left ">
+          <a routerLink="login" class="btn-login">
+            <svg class="svg-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 3C9.56586 3 7.59259 4.95716 7.59259 7.37143C7.59259 9.7857 9.56586 11.7429 12 11.7429C14.4341 11.7429 16.4074 9.7857 16.4074 7.37143C16.4074 4.95716 14.4341 3 12 3Z" fill="#ffffff"/>
+                <path d="M14.601 13.6877C12.8779 13.4149 11.1221 13.4149 9.39904 13.6877L9.21435 13.7169C6.78647 14.1012 5 16.1783 5 18.6168C5 19.933 6.07576 21 7.40278 21H16.5972C17.9242 21 19 19.933 19 18.6168C19 16.1783 17.2135 14.1012 14.7857 13.7169L14.601 13.6877Z" fill="#ffffff"/>
+            </svg>
+            Login
+          </a>
+        </div>
+        <div class="justify-content-center align-items-left">
+          <a href="" class="btn-shippingCart">
+            <svg class="svg-icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4.46785 10.2658C4.47574 10.3372 4.48376 10.4094 4.49187 10.4823L4.61751 11.6131C4.7057 12.4072 4.78218 13.0959 4.91562 13.6455C5.05917 14.2367 5.29582 14.7937 5.78931 15.2354C6.28281 15.6771 6.86251 15.8508 7.46598 15.9281C8.02694 16.0001 8.71985 16 9.51887 16H14.8723C15.4201 16 15.9036 16 16.3073 15.959C16.7448 15.9146 17.1698 15.8162 17.5785 15.5701C17.9872 15.324 18.2731 14.9944 18.5171 14.6286C18.7422 14.291 18.9684 13.8637 19.2246 13.3797L21.7141 8.67734C22.5974 7.00887 21.3879 4.99998 19.5 4.99998L9.39884 4.99998C8.41604 4.99993 7.57525 4.99988 6.90973 5.09287C6.5729 5.13994 6.24284 5.21529 5.93326 5.34375L5.78941 4.04912C5.65979 2.88255 4.67375 2 3.5 2H3C2.44772 2 2 2.44771 2 3C2 3.55228 2.44772 4 3 4H3.5C3.65465 4 3.78456 4.11628 3.80164 4.26998L4.46785 10.2658Z" fill="#ffffff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14 19.5C14 18.1193 15.1193 17 16.5 17C17.8807 17 19 18.1193 19 19.5C19 20.8807 17.8807 22 16.5 22C15.1193 22 14 20.8807 14 19.5Z" fill="#ffffff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5 19.5C5 18.1193 6.11929 17 7.5 17C8.88071 17 10 18.1193 10 19.5C10 20.8807 8.88071 22 7.5 22C6.11929 22 5 20.8807 5 19.5Z" fill="#ffffff"/>
+          </svg>
+          Carrito
+        </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </nav>

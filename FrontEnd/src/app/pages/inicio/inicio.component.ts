@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductosService } from '../../services/productos.service';
 import { ImagenesService } from '../../services/imagenes.service';
+import { RouterLink } from '@angular/router';
 import { CategoriasService } from '../../services/categorias.service';
 import { BuscarcategoriaService } from '../../services/buscarcategoria.service';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
@@ -24,7 +25,7 @@ export class InicioComponent {
     categorias: any[] = []
     products: any[] = []
     images: any[] = []
-    pageSize = 12; 
+    pageSize = 18; 
     currentPage = 1; 
 
   //metodo que usaremos para obtener productos

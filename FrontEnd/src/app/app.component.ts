@@ -33,4 +33,10 @@ export class AppComponent {
   irACategoria(categoria: any) {
     this.router.navigate([`categorias/${categoria.NOMBRE}`]); // Asegúrate de usar un identificador válido
   }
+
+
+  dropdownText: string = 'TODO';
+  updateDropdownText(value: string) {
+    this.dropdownText = value;
+  }
 }

@@ -1,3 +1,101 @@
+.navPrincipal {
+    background: linear-gradient(to bottom, #303C63, #000000af);
+    border-top: 1px solid #303C63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-custom-filtro {
+    font-weight: normal;
+    color: white;
+    background-color: #e5e5e537;
+    border-color: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+.btn-custom-filtro:hover {
+    background-color: #bcbcbc8d
+}
+
+.btn-custom-filtro:active {
+    background-color: #bcbcbc8d;
+
+}
+
+.btn-custom-filtro:focus{
+    background-color: #bcbcbc8d;
+    color: white;
+    border-color: rgb(233, 233, 233);
+    border-width:1px
+}
+
+.btn-custom-busqueda {
+    font-weight: normal;
+    color: rgb(141, 141, 141);
+    background-color: #fede86;
+    border-color: none;
+    font-size: 14px;
+}
+
+.btn-custom-busqueda:hover {
+    background-color: #fede86c7
+}
+
+.btn-custom-busqueda:active {
+    background-color: #fede86c7
+
+}
+
+.btn-custom-busqueda:focus{
+    background-color: #fede86c7;
+    color: white;
+    border-color: rgb(233, 233, 233);
+    border-width:1px
+}
+
+.custom-item-li {
+    font-size: 12px;
+    transition: background-color 0.1s ease; 
+}
+
+
+.custom-item-li:hover {
+    background-color: #001eff16; 
+}
+
+.botonesNav{
+    display: inline-flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.botonesNav div{
+    padding-right: 1rem;
+
+}
+
+.botonesNav div a{
+    text-decoration: none;
+    color: white;
+    border-radius: 10%;
+    border: 1px solid rgba(255, 255, 255, 0.218);
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-login:hover{
+    background-color: #44c51581; 
+}
+
+.btn-shippingCart:hover{
+    background-color: #44c51581; 
+}
 .offcanvas {
     background-color: #ffffff; 
     color: #04207c;
